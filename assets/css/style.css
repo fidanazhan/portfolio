@@ -179,35 +179,60 @@ html{
     align-items: center;
 }
 
+#project-title{
+    grid-area: project-title;
+}
+
+#project-tags{
+    grid-area: project-tags;
+}
+
+#project-text{
+    grid-area: project-text;
+}
+
+#project-button{
+    grid-area: project-button;
+}
+
+#project-image{
+    grid-area: project-image;
+    margin: auto;
+}
+
 .card{
-    display: flex;
-    padding: 15px 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 0.5fr 3fr 2fr;
+    grid-template-areas: 
+    "project-title project-image"
+    "project-tags project-image"
+    "project-text project-image"
+    "project-button project-image";
     width: 100%;
     border-radius: 8px;
     z-index: 0;
     justify-content: space-between;
+    padding: 30px 0;
 }
 
-.project-content{
-    width: 510px;
-    height: 300px;
-}
 
-.project-content h3{
+.project .card h3{
     font-size: 24px;
     font-weight: 500;
 }
 
-.project-content .project-tags{
+.project .card .project-tags{
     color: rgb(153, 153, 153);
     font-weight: 300;
+
 }
 
-.project-content p,
-.project-detail-content p{
+.project .card .project-text{
     margin: 8px 0 25px;
     text-align: justify;
     color: #000;
+    width: 510px;
 }
 
 .card img{
@@ -230,6 +255,8 @@ html{
     border-radius: 8px;
     margin-top: 5px;
     transition: 0.6s;
+    /* margin-top: 10px ;
+    margin-bottom: 20px; */
 }
 
 .read-more:hover{
@@ -248,7 +275,7 @@ html{
 
 .project-detail-page .project-detail-content .project-elaboration h2{
     margin: 20px 0;
-} 
+}
 
 .project-detail-page .project-elaboration ul{
     list-style: none;
@@ -264,7 +291,7 @@ html{
 /* --------------- ABOUT ---------------- */
 
 .about{
-    padding: 80px 160px 20px;
+    padding: 80px 160px 45px;
 }
 
 .about .section-title{
@@ -274,12 +301,35 @@ html{
 .about .title{
     color: rgb(255, 255, 255);
 }
+#about-title{
+    grid-area: about-title;
+}
+
+#about-text{
+    grid-area: about-text;
+    width: 510px;
+    text-align: justify;
+}
+
+#about-button{
+    grid-area: about-button;
+}
+
+#about-image{
+    grid-area: about-image;
+}
 
 .about-body{
     display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
+    grid-template-columns: 610px auto;
+    grid-template-rows: 55px 245px 75px;
+    grid-template-areas: 
+    "about-title about-image"
+    "about-text about-image"
+    "about-button about-image";
+    width: 100%;
 }
+
 
 .about-picture{
     margin: auto;
@@ -317,6 +367,7 @@ html{
 .about-action-button{
     display: flex;
     justify-content: space-evenly;
+    margin: 20px 0 20px;
 }
 
 .about-action-button a{
@@ -340,7 +391,7 @@ html{
 }
 
 .about-detail-page .text-indent{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 /* --------------- CONTACT --------------- */
@@ -475,7 +526,7 @@ footer{
     }
 
     .navbar{
-        padding: 10px 70px 0; 
+        padding: 10px 70px 0;
         z-index: 10;
     }
 
@@ -542,28 +593,59 @@ footer{
         padding: 50px 50px 0;
     }
 
-     .project .project-content{
-        width: 325px;
+    .home-content p > br{
+        display: none;
     }
 
-    .project-detail-page{
-        padding: 40px 0 30px;
+    .project .card{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "project-title"
+        "project-tags"
+        "project-image"
+        "project-text"
+        "project-button";
+        grid-template-rows: 30px 35px 335px 100px 60px;
+        justify-content: center;
+        padding: 0;
     }
 
-    .project-detail-content{
-        max-width: 600px;
+    #project-image{
+        margin: auto;
+        width: 380px;
+        height: 310px;
+    }
+
+    #project-text{
+        width: 100%;
     }
 
     .about, .skills, .project, .services{
         padding: 80px 50px;
     }
 
-    .home-content p > br{
-        display: none;
+    .about{
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
 
-    .about-content{
+    .about .about-body{
+        grid-template-columns: 330px auto;
+        grid-template-rows: 60px 330px 75px;
+        row-gap: 10px;
+        grid-template-areas: 
+        "about-title about-title"
+        "about-text about-image"
+        "about-button about-image";
+    }
+
+    #about-text{
         width: 300px;
+    }
+
+    .about-body img{
+        height: 400px;
+        margin-top: -2px;
     }
 
     .services{
@@ -574,7 +656,7 @@ footer{
         justify-content: space-between;
     }
 
-    
+
     .contact{
         padding: 50px 20px 20px;
     }
@@ -604,18 +686,18 @@ footer{
     .logo{
         font-size: 1rem;
     }
-    
+
     .home, .about, .skills, .project, .services{
         padding: 80px 10px;
     }
 
     .home{
         display: block;
-        height: 500px;
+        height: 430px;
     }
 
     .home-content{
-        padding: 0 50px ;
+        padding: 0 20px ;
     }
 
     .home-content h3{
@@ -630,14 +712,14 @@ footer{
         display: none;
     }
 
-    .card{
-        flex-direction: column-reverse;
+    .project{
+        padding-top: 40px;
+        padding-bottom: 10px;
     }
 
-    .project .card .project-content,
-    .project .card img{
-        margin: auto;
-        margin-bottom: 20px;
+    .project .card{
+        grid-template-rows: 30px 35px 335px 200px 60px;
+        padding: 15px;
     }
 
     .project .section-title{
@@ -645,8 +727,37 @@ footer{
         justify-content: center;
     }
 
-    .about-body{
-        display: block;
+    #project-text{
+        width: 330px;
+        margin: auto;
+    }
+
+    #project-image{
+        width: 300px;
+        height: 300px;
+    }
+
+    .about{
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    
+    #about-image{
+        width: 330px;
+    }
+
+    .about-text{
+        margin: auto;
+    }
+
+    .about .about-body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 400px 330px 75px;
+        grid-template-areas: 
+        "about-title"
+        "about-image"
+        "about-text"
+        "about-button";
     }
 
     .about-body img {
@@ -659,13 +770,12 @@ footer{
         margin-left: 15px;
     }
 
-    .about-content .title{
+    .about .title{
         margin-top: 25px;
         text-align: center;
     }
 
-    .about-content p{
-        margin: 15px 0;
+    .about p{
         font-size: 16px;
     }
 
@@ -682,23 +792,6 @@ footer{
         display: block;
     }
 
-    .services .section-title{
-        font-size: 1.5rem;
-    }
-
-    .services-collection{
-        display: grid;
-        margin: auto;
-    }
-
-    .services-card{
-        margin: 0;
-    }
-
-    .services-content{
-        width: 350px;
-    }
-
     .project-detail-content{
         max-width: 320px;
         margin: none;
@@ -711,6 +804,27 @@ footer{
     .about-detail-page .about-detail-picture .my-picture{
         width: 290px;
         height: 350px;
+    }
+
+    .contact-content{
+        padding: 10px 10px 15px;
+    }
+
+    .social-media-links{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contact-content h3{
+        font-size: 28px;
+    }
+
+    .contact-content p{
+        text-align: justify;
+    }
+
+    .contact-content p > br{
+        display: none;
     }
 
 }
