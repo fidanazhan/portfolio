@@ -337,7 +337,11 @@ html{
     background-color: transparent;
     color: rgb(232, 47, 100);
 
-} 
+}
+
+.about-detail-page .text-indent{
+    margin-left: 20px;
+}
 
 /* --------------- CONTACT --------------- */
 .contact{
