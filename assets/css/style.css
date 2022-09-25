@@ -116,7 +116,7 @@ html{
 }
 
 .home{
-    height: 500px;
+    height: 430px;
     display: flex;
     justify-content: center;
 }
@@ -586,7 +586,7 @@ footer{
 
     .home{
         padding: 50px;
-        height: 430px;
+        height: 390px;
     }
 
     .home-content{
