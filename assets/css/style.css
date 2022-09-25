@@ -687,6 +687,10 @@ footer{
         font-size: 1rem;
     }
 
+    .logo span{
+        margin-left: 5px;
+    }
+
     .home, .about, .skills, .project, .services{
         padding: 80px 10px;
     }
@@ -743,7 +747,8 @@ footer{
     }
     
     #about-image{
-        width: 330px;
+        width: 270px;
+        height: 330px;
     }
 
     .about-text{
@@ -752,7 +757,7 @@ footer{
 
     .about .about-body{
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 400px 330px 75px;
+        grid-template-rows: 60px 345px 330px 75px;
         grid-template-areas: 
         "about-title"
         "about-image"
