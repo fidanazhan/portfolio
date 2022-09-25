@@ -576,6 +576,10 @@ footer{
         margin-top: 5px;
     }
 
+    .logo span{
+        margin-left: 5px;
+    }
+
     .sidebar_link{
         display: flex;
         /* margin-top: 9.5px; */
@@ -586,7 +590,7 @@ footer{
 
     .home{
         padding: 50px;
-        height: 390px;
+        height: 430px;
     }
 
     .home-content{
@@ -681,10 +685,6 @@ footer{
         right: -100%;
         width: 100%;
         opacity: 1.0;
-    }
-
-    .logo{
-        font-size: 1rem;
     }
 
     .logo span{
