@@ -30,3 +30,4 @@ sr.reveal(`.index .project`, {interval: 100, delay: 700})
 sr.reveal(`.project-page .project`, {interval: 50, delay: 200})
 sr.reveal(`.filters__content`, {delay: 900})
 sr.reveal(`.filters`, {delay: 1000})
+
